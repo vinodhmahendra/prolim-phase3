@@ -1,0 +1,5 @@
+package com.simplilearn.workshop.services;
+
+public interface TodoService {
+
+}
