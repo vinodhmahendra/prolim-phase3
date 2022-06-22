@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <!-- 
+            configured a repository bean
+        	Interface Name :TodoRepository
+        	Qualified Class Name :com.simplilearn.workshop.repository.TodoRepositoryImpl
+         -->
+        <bean id="todoRepository" class="com.simplilearn.workshop.repository.TodoRepositoryImpl"/>
+        
+        
+          <!-- 
+            configured a service bean
+        	Interface Name :TodoService
+        	Qualified Class Name :com.simplilearn.workshop.services.TodoServiceImpl
+         -->
+         
+          <bean id="todoService" class="com.simplilearn.workshop.services.TodoServiceImpl">
+       		 <!-- 	Setter Dependency Injection (DI)  -->
+         	<property name="theTodoRepository">
+         		<ref bean="todoRepository"/>
+         	</property>
+         	
+         </bean> 
+         
+        <!--  
+        <bean id="todoService" class="com.simplilearn.workshop.services.TodoServiceImpl">
+         
+        	Constructor Dependency Injection (DI) 
+         
+          <constructor-arg name="theTodoRepository">
+          	<ref bean="todoRepository"/>
+          </constructor-arg>
+         </bean> 
+         -->
+        
+</beans>
