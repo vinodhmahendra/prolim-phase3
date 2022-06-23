@@ -8,7 +8,7 @@ import com.simplilearn.workshop.repository.TodoRepositoryImpl;
 
 public class TodoServiceImpl implements TodoService {
 
-	
+	//depends on repository
 	private TodoRepository theTodoRepository = new TodoRepositoryImpl();
 	
 	@Override
