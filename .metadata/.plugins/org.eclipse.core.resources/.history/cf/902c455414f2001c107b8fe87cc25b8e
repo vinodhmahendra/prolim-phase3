@@ -1,5 +1,0 @@
-package com.simplilearn.workshop.repository;
-
-public interface TodoRepository {
-
-}
